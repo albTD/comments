@@ -1,3 +1,38 @@
 page-home {
+    #grad1{
+        background-image: linear-gradient(to right, #d580ff , #f2f2f2);
+    }
+    ion-textarea {
+        border-bottom: 1px solid #000000;
+        margin: 0px 5px;
+        
+    }
+    p {
+        text-align: justify;
+    }
+    .comment-box {
+        overflow: scroll;
+        
+    }
+    .bas{
+      background-color:#00aaff;
+       
+    }
+    .basa{
+        height:10px;
+    }
 
+    .la{
+       margin-left:210px;
+       height:2px;
+       margin-bottom:10px;
+    }
+    .faa{
+height:5px;
+    }
+     .faaa{
+color: #ff1a1a;
+font-weight: 900;
+font-size: 17px;
+    }
 }

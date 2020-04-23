@@ -1,14 +1,62 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <ion-title>
-      Ionic Blank
+      Live Comments
     </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content padding id="grad1">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <!-- <h1 text-center> Interesting Article</h1> -->
+  <!-- <p>
+    Once you're done creating the quality content, you still have the challenge of presenting it that clearly dictates what your blog is about. Images, text, and links need to be shown off just right -- otherwise, readers might abandon your content if it's not aesthetically showcased in a way that's both appealing and easy to follow. </p> -->
+
+    
+   
+  <div>
+    <ion-textarea [(ngModel)]="pid" type="int" placeholder="pid"></ion-textarea>
+    <ion-textarea [(ngModel)]="uid" type="int" placeholder="uid"></ion-textarea>
+    <ion-textarea [(ngModel)]="message" type="text" placeholder="Comment .... "></ion-textarea>
+
+    <button ion-button small float-right round (click)="sendComment() "  (click)="getComment()">Send</button>
+    <!-- <button ion-button small float-left round (click)="getComment()">get</button> -->
+</div>
+<br>
+<br>
+<br>
+<div class="comment-box">
+      <ion-card *ngFor="let result of results">
+
+<ion-row>
+        <ion-card-content>
+              <strong>{{result.userid}}:</strong>
+ <ion-item class="faa">
+              <p class="faaa">
+                {{result.comment}}
+               
+              </p>
+              </ion-item>
+              
+              <p class="la">
+{{result.time | date : 'H:mm a'}}
+              </p>
+
+        </ion-card-content>
+        </ion-row>
+        <ion-row class="basa">
+         <ion-item class="bas"></ion-item>
+        </ion-row>
+<!-- <ion-row>
+    <ion-col>
+      <button ion-button icon-start clear small (tap)="tapEvent($event)" >
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{tap}}</div>
+      </button>
+    </ion-col>
+    
+    </ion-row> -->
+    
+      </ion-card>
+    </div>
+
 </ion-content>
